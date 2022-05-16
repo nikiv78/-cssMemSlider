@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(131,58,180);
+background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,32,29,1) 50%, rgba(252,176,69,1) 100%);
+    overflow: hidden;
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+    "a a a"
+    "b b c";
+    width: 60vw;
+    height: 80vh;
+    margin: 5% auto 0;
+    grid-row-gap: 2rem;
+}
+
+
+.images {
+    grid-area: a;
+    height: 75vh;
+    overflow: hidden;
+    
+}
+.wrapper {
+    height: 400%;
+    overflow: hidden;
+}
+
+.text {
+    
+    grid-area: b;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    font-weight: normal;
+    cursor: pointer;
+    color: aliceblue;
+}
+.text__wrapper {
+    height: 5vh;
+    overflow: hidden;
+}
+
+
+.buttons {
+    grid-area: c;
+    display: flex;
+    gap: 0.35rem;
+    justify-content: flex-end;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: 25%;
+    border: 0.2rem solid rgba(53,212,4,1);
+    border-radius: 1rem;
+    transition: 1s all;
+}
+
+span {
+    display: block;
+    height: 100%;
+    /* padding: 0.3rem; */
+    transition: 1s all;
+    
+}
+
+input {
+    display: none;
+}
+
+.btn {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    border: 0.2rem solid rgb(38, 77, 236);
+    background-color: rgb(10, 10, 10);
+}
+
+label {
+    width: 3em;
+    height: 3rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+label:hover .btn {
+    border-color: rgb(255, 0, 0);
+    transition: 0.5s;
+    background-color: rgb(130, 3, 248);
+    cursor: pointer;
+}
+
+label:active .btn {
+    background-color: rgb(242, 255, 2);
+}
+
+#first:checked~.buttons>label:nth-of-type(1) .btn {
+    background-color: rgb(255, 0, 111);
+}
+#second:checked~.buttons>label:nth-of-type(2) .btn {
+    background-color: rgb(0, 217, 255);
+}
+#third:checked~.buttons>label:nth-of-type(3) .btn {
+    background-color: rgb(0, 255, 30);
+}
+#fourth:checked~.buttons>label:nth-of-type(4) .btn {
+    background-color: rgb(255, 0, 200);
+}
+
+#first:checked~.images>.wrapper>.active {
+    margin-top: 0;
+}
+#second:checked~.images>.wrapper>.active {
+    margin-top: -75vh;
+}
+#third:checked~.images>.wrapper>.active {
+    margin-top: -150vh; 
+}
+#fourth:checked~.images>.wrapper>.active {
+    margin-top: -225vh;
+}
+
+#first:checked~.text>.text__wrapper>.active {
+    margin-top: 0;
+}
+#second:checked~.text>.text__wrapper>.active {
+    margin-top: -5vh;
+}
+#third:checked~.text>.text__wrapper>.active {
+    margin-top: -10vh; 
+}
+#fourth:checked~.text>.text__wrapper>.active {
+    margin-top: -15vh;
+}
+
+@media screen and (max-width: 820px) {
+    .container {
+        grid-template-areas:
+        "a"
+        "c"
+        "b";
+        grid-row-gap: 0rem;
+        height: 100%;
+        width: 60vw;
+        grid-row-gap: 2rem;
+        margin: 20% auto 0;
+    }
+    .buttons {
+        justify-content: center;
+        height: 1vw;
+    }
+    .text {
+        font-size: 2.1vw;
+        overflow: hidden;
+        
+    }
+    .wrapper {
+        height: 400%;
+        overflow: hidden;
+    }
+    .images {
+        grid-area: a;
+        height: 25vh;
+        overflow: hidden
+        
+    }
+        
+
+   img {
+        width: 100%;
+        height: 25%;
+        overflow: hidden; 
+    }
+    #first:checked~.images>.wrapper>.active {
+        margin-top: 0;
+    }
+    #second:checked~.images>.wrapper>.active {
+        margin-top: -25vh;
+    }
+    #third:checked~.images>.wrapper>.active {
+        margin-top: -50vh; 
+    }
+    #fourth:checked~.images>.wrapper>.active {
+        margin-top: -75vh;
+    }
+
+}
+
