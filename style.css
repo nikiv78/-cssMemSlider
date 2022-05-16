@@ -142,3 +142,56 @@ label:active .btn {
     margin-top: -15vh;
 }
 
+@media screen and (max-width: 820px) {
+    .container {
+        grid-template-areas:
+        "a"
+        "c"
+        "b";
+        grid-row-gap: 0rem;
+        height: 100%;
+        width: 60vw;
+        grid-row-gap: 2rem;
+        margin: 20% auto 0;
+    }
+    .buttons {
+        justify-content: center;
+        height: 1vw;
+    }
+    .text {
+        font-size: 2.1vw;
+        overflow: hidden;
+        
+    }
+    .wrapper {
+        height: 400%;
+        overflow: hidden;
+    }
+    .images {
+        grid-area: a;
+        height: 25vh;
+        overflow: hidden
+        
+    }
+        
+
+   img {
+        width: 100%;
+        height: 25%;
+        overflow: hidden; 
+    }
+    #first:checked~.images>.wrapper>.active {
+        margin-top: 0;
+    }
+    #second:checked~.images>.wrapper>.active {
+        margin-top: -25vh;
+    }
+    #third:checked~.images>.wrapper>.active {
+        margin-top: -50vh; 
+    }
+    #fourth:checked~.images>.wrapper>.active {
+        margin-top: -75vh;
+    }
+
+}
+
