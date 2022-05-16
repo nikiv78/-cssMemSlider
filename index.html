@@ -4,9 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <title>cssMemSlider</title>
 </head>
 <body>
-    
+<div class="container">
+    <input type="radio" name="slide" id="first" checked>
+    <input type="radio" name="slide" id="second">
+    <input type="radio" name="slide" id="third">
+    <input type="radio" name="slide" id="fourth">
+    <div class="images">
+        <div class="wrapper">
+            <img src="./assets/mem1.jpg" alt="mem image" class="active">
+            <img src="./assets/mem2.jpg" alt="mem image">
+            <img src="./assets/mem3.jpg" alt="mem image" >
+            <img src="./assets/mem4.jpg" alt="mem image" >
+        </div>
+    </div>
+    <div class="text">
+        <div class="text__wrapper">
+        <span class="active">Это не баг, это фича!</span>
+        <span>Первые 90% проекта занимают 90% времени. Оставшиеся 10% — другие 90%.</span>
+        <span>78% программистов на JS не знают математику. Как хорошо, что я отношусь к оставшимся 32%!</span>
+        <span>Чтобы понять рекурсию нужно сначала понять рекурсию.</span>
+    </div>
+</div>
+    <div class="buttons">
+        <label for="first">
+        <div class="btn"></div>
+    </label>
+        <label for="second">
+            <div class="btn"></div>
+        </label>
+        <label for="third">
+            <div class="btn"></div>
+        </label>
+        <label for="fourth">
+            <div class="btn"></div>
+        </label>
+    </div>
+</div>
 </body>
 </html>
